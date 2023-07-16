@@ -16,7 +16,6 @@ const Recipe = () => {
   useEffect(() => {
     fetchRecipeById(id);
   }, [fetchRecipeById, id]);
-  console.log(recipe);
 
   return (
     <div>

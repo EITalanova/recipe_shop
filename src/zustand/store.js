@@ -8,11 +8,19 @@ const useBeerStore = create(set => ({
   recipes: [],
   oneRecipe: null,
   favoriteRecipes: [],
+  visibleRecipes: [],
+  page: 1,
 
-  fetchRecipes: async () => {
+  fetchRecipes: async (page) => {
     try {
-      const res = await axios.get(`/beers?page=1`);
+      const res = await axios.get(`/beers?page=${page}`);
+      const recipes = res.data;
+
       set({ recipes: res.data });
+      return set(state => ({
+        recipes,
+        visibleRecipes: recipes.slice(0, 15),
+      }));
     } catch (error) {
       console.error(error);
     }
@@ -37,6 +45,35 @@ const useBeerStore = create(set => ({
         idFavorite => idFavorite !== id
       ),
     }));
+  },
+  updateVisibleRecipes: () => {
+    set(state => {
+      const removedRecipes = state.visibleRecipes.splice(0, 5);
+      const lastRecipeIndex = state.recipes.indexOf(
+        state.visibleRecipes[state.visibleRecipes.length - 1]
+      );
+      const addedRecipes = state.recipes.slice(
+        lastRecipeIndex + 1,
+        lastRecipeIndex + 1 + 5
+      );
+
+      const newVisibleRecipes = [...state.visibleRecipes, ...addedRecipes];
+      return { visibleRecipes: newVisibleRecipes };
+    });
+  },
+  updatePage: 
+  () => 
+  {
+  //   set(state => {
+  //     // const { page, recipes, visibleRecipes } = state;
+  //     const lastRecipeIndex = state.recipes[state.recipes.length - 1];
+  //     console.log(lastRecipeIndex);
+  //     // const lastVisibleRecipeIndex = visibleRecipes[visibleRecipes.length - 1];
+
+  //     // if (lastRecipeIndex.id === lastVisibleRecipeIndex.id) {
+  //     //   return page + 1;
+  //     // }
+  //   });
   },
 }));
 
