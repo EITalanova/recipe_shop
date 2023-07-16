@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRef, useState } from 'react';
+import { debounce } from 'lodash';
 import useBeerStore from '../../zustand/store';
 
 import { RecipeCard } from 'components/RecipeCard/RecipeCard';
@@ -14,7 +15,9 @@ export const RecipesList = () => {
   const visibleRecipes = useBeerStore(state => state.visibleRecipes);
   const favoriteRecipesId = useBeerStore(state => state.favoriteRecipes);
 
-  const updateVisibleRecipes = useBeerStore(state => state.updateVisibleRecipes);
+  const updateVisibleRecipes = useBeerStore(
+    state => state.updateVisibleRecipes
+  );
   const updatePage = useBeerStore(state => state.updatePage);
   const page = useBeerStore(state => state.page);
   const recipes = useBeerStore(state => state.recipes);
@@ -25,8 +28,10 @@ export const RecipesList = () => {
     window.scrollTo(0, 0);
 
     if (isLoading) {
+      // const delayedUpdateVisibleRecipes = setTimeout(() => {
       updateVisibleRecipes();
       setIsLoading(false);
+      // }, 500);
 
       const lastVisibleRecipeIndex = visibleRecipes[visibleRecipes.length - 1];
       console.log(lastRecipeIndex.id);
@@ -36,6 +41,9 @@ export const RecipesList = () => {
         updatePage();
         console.log('page', page);
       }
+      // return () => {
+      //   clearTimeout(delayedUpdateVisibleRecipes);
+      // };
     }
     // eslint-disable-next-line
   }, [isLoading]);
@@ -53,12 +61,18 @@ export const RecipesList = () => {
     };
   }, []);
 
-  const handleScroll = () => {
+  const handleScroll = debounce(() => {
     const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 1) {
+    if (scrollTop + clientHeight >= clientHeight + 110 && !isLoading) {
       setIsLoading(true);
     }
-  };
+  }, 200);
+  // () => {
+  //   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+  //   if (scrollTop + clientHeight >= clientHeight + 110 && !isLoading) {
+  //     setIsLoading(true);
+  //   }
+  // };
 
   const handleShowFavorites = () => {
     setShowFavorites(!showFavorites);

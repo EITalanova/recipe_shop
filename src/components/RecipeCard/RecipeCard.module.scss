@@ -2,10 +2,12 @@
 @import '../../scss/_variables.scss';
 
 .recipeCard {
+  display: flex;
   position: relative;
-  padding: 30px 50px;
+  padding: 10px 50px;
   width: 100%;
   overflow: hidden;
+  height: calc((100vh - 40px) / 6);
 
   background-color: $mainLightColor;
   box-shadow: 0 0 20px rgba(32, 30, 30, 0.5);
@@ -38,17 +40,18 @@
 .recipeCardImgBox {
   display: flex;
   justify-content: center;
-  width: 400px;
+  // padding-top: 50px;
+  width: 100px;
   height: 150px;
 
   @include tablet {
-    width: 200px;
+    width: 100px;
     height: 300px;
   }
 
   @include desktop {
     width: 200px;
-    height: 300px;
+    height: 150px;
   }
 }
 
@@ -59,15 +62,15 @@
   text-align: start;
   gap: 10px;
 
-  font-size: 15px;
+  font-size: 17px;
   color: $darkTextColor;
 
   @include tablet {
-    font-size: 25px;
+    // font-size: 25px;
   }
 
   @include desktop {
-    font-size: 25px;
+    // font-size: 25px;
   }
 }
 
@@ -81,7 +84,7 @@
   font-size: 20px;
 
   @include tablet {
-    font-size: 32px;
+    font-size: 22px;
   }
 }
 
@@ -143,6 +146,6 @@
 
   @include desktop {
     padding: 30px 70px;
-    font-size: 22px;
+    font-size: 16px;
   }
 }
