@@ -1,10 +1,44 @@
-
+@import '../../scss/mixins';
+@import '../../scss/variables';
 
 .recipesList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 300px;
+
+  @include tablet {
+    width: 780px;
+  }
+
+  @include desktop {
     width: 1200px;
-   
+  }
+}
+
+.btnOnFavorite {
+  display: block;
+  padding: 10px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(33, 32, 32, 0.5);
+  color: $mainLightColor;
+  background-color: $accentColor;
+  border-radius: 50px;
+  border: none;
+}
+
+.btnOffFavorite {
+  display: block;
+  padding: 10px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(33, 32, 32, 0.5);
+  color: $accentColor;
+  background-color: $mainLightColor;
+  border-radius: 50px;
+  border: none;
 }

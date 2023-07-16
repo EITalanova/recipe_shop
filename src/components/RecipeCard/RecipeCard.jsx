@@ -9,19 +9,15 @@ import { ReactComponent as Bottle } from '../../assets/icons/bottle.svg';
 import style from './RecipeCard.module.scss';
 
 export const RecipeCard = ({ recipe }) => {
-  const { image_url, name, id, description, tagline, first_brewed, volume } =
-    recipe;
+  const { image_url, name, id, description, tagline, first_brewed, volume } = recipe;
 
   const addFavoriteRecipe = useBeerStore(state => state.addFavoriteRecipe);
-  const removeFavoriteRecipe = useBeerStore(
-    state => state.removeFavoriteRecipe
-  );
+  const removeFavoriteRecipe = useBeerStore(state => state.removeFavoriteRecipe);
   const favoriteRecipes = useBeerStore(state => state.favoriteRecipes);
   const isFavorite = favoriteRecipes.includes(id);
 
   const handleFavorites = e => {
     e.preventDefault();
-
     if (!isFavorite) {
       return addFavoriteRecipe(id);
     }

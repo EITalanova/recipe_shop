@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { create } from 'zustand';
-// import { persist } from 'zustand/middleware';
 
 axios.defaults.baseURL = 'https://api.punkapi.com/v2';
 
@@ -11,7 +10,7 @@ const useBeerStore = create(set => ({
   visibleRecipes: [],
   page: 1,
 
-  fetchRecipes: async (page) => {
+  fetchRecipes: async page => {
     try {
       const res = await axios.get(`/beers?page=${page}`);
       const recipes = res.data;
@@ -46,34 +45,25 @@ const useBeerStore = create(set => ({
       ),
     }));
   },
+  updatePage: () => set(state => ({ page: state.page + 1 })),
+
   updateVisibleRecipes: () => {
     set(state => {
-      const removedRecipes = state.visibleRecipes.splice(0, 5);
       const lastRecipeIndex = state.recipes.indexOf(
         state.visibleRecipes[state.visibleRecipes.length - 1]
       );
+      console.log(lastRecipeIndex);
       const addedRecipes = state.recipes.slice(
         lastRecipeIndex + 1,
         lastRecipeIndex + 1 + 5
       );
+      console.log('ff', addedRecipes);
+      // eslint-disable-next-line
+      const removedRecipes = state.visibleRecipes.splice(10, 5);
 
-      const newVisibleRecipes = [...state.visibleRecipes, ...addedRecipes];
+      const newVisibleRecipes = [...addedRecipes, ...state.visibleRecipes];
       return { visibleRecipes: newVisibleRecipes };
     });
-  },
-  updatePage: 
-  () => 
-  {
-  //   set(state => {
-  //     // const { page, recipes, visibleRecipes } = state;
-  //     const lastRecipeIndex = state.recipes[state.recipes.length - 1];
-  //     console.log(lastRecipeIndex);
-  //     // const lastVisibleRecipeIndex = visibleRecipes[visibleRecipes.length - 1];
-
-  //     // if (lastRecipeIndex.id === lastVisibleRecipeIndex.id) {
-  //     //   return page + 1;
-  //     // }
-  //   });
   },
 }));
 

@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-
 import useBeerStore from '../zustand/store';
 
 import { ButtonNav } from 'components/ButtonNav/ButtonNav';
@@ -34,21 +33,23 @@ const Recipe = () => {
             <p className={style.recipeText}>{recipe.description}</p>
             <ul className={style.recipeList}>
               Ingredients
-              {recipe.ingredients.hops && recipe.ingredients.hops.map(hop => (
-                <li className={style.recipeText} key={nanoid()}>
-                  <p>
-                    {hop.name}: {hop.amount.value} {hop.amount.unit}
-                  </p>
-                </li>
-              ))}
+              {recipe.ingredients.hops &&
+                recipe.ingredients.hops.map(hop => (
+                  <li className={style.recipeText} key={nanoid()}>
+                    <p>
+                      {hop.name}: {hop.amount.value} {hop.amount.unit}
+                    </p>
+                  </li>
+                ))}
             </ul>
             <ul className={style.recipeList}>
               Food pairing
-              {recipe.food_pairing && recipe.food_pairing.map(food => (
-                <li className={style.recipeText} key={nanoid()}>
-                  <p>{food}</p>
-                </li>
-              ))}
+              {recipe.food_pairing &&
+                recipe.food_pairing.map(food => (
+                  <li className={style.recipeText} key={nanoid()}>
+                    <p>{food}</p>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

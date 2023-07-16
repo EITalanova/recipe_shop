@@ -3,7 +3,6 @@ import { RecipesList } from 'components/RecipesList/RecipesList';
 
 import style from './styles/RecipeShop.module.scss';
 
-
 const RecipeShop = () => {
   return (
     <div className={style.recipeShop}>
