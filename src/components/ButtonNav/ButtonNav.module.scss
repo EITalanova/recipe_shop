@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+
+.btn {
+  display: block;
+  padding: 30px;
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(33, 32, 32, 0.5);
+  color: $accentColor;
+  background-color: $mainLightColor;
+  border-radius: 50px;
+  transition: background-color 300ms ease;
+
+  &:hover,
+  &:focus {
+    color: $mainLightColor;
+    background-color: $accentColor;
+  }
+}

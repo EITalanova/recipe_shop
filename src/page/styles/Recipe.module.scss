@@ -1,0 +1,43 @@
+@import '../../scss/_mixins.scss';
+
+.recipeBox {
+  display: flex;
+  padding: 40px;
+  gap: 100px;
+}
+.recipeImgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 800px;
+}
+
+.recipeImg {
+  height: 800px;
+}
+
+.recipeTextBox {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+  width: 600px;
+
+  text-align: justify;
+}
+.recipeList {
+  list-style-type: disc;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.recipeText {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.recipeBtn {
+  width: 100%;
+}

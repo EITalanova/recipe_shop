@@ -1,0 +1,21 @@
+@import '../../scss/_mixins.scss';
+@import '../../scss/_variables.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  padding: 30px;
+  background-image: url('../../assets/images/bgHome.png');
+  background-size: cover;
+  width: 1200px;
+  height: 100vh;
+}
+
+.homeBtn {
+  color: $accentColor;
+  // border: 1px solid rgb(26, 124, 64);
+  background-color: white;
+  border-radius: 50px;
+}

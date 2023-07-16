@@ -1,0 +1,69 @@
+@import './variables';
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  word-wrap: normal;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-weight: 400;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+// button:hover,
+// a:hover,
+// button:focus,
+// a:focus {
+//   color: $mainDarkColor;
+//   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+// }
