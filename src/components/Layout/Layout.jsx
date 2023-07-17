@@ -8,7 +8,7 @@ import style from './Layout.module.scss';
 export const Layout = () => {
   return (
     <div className={style.container}>
-      <Suspense fallback={<PulseLoader color="#1A7C40" size={40} />}>
+      <Suspense fallback={<PulseLoader color="#1A7C40" size={30} />}>
         <Outlet />
       </Suspense>
     </div>
