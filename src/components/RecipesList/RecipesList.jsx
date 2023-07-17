@@ -28,29 +28,20 @@ export const RecipesList = () => {
     window.scrollTo(0, 0);
 
     if (isLoading) {
-      // const delayedUpdateVisibleRecipes = setTimeout(() => {
       updateVisibleRecipes();
       setIsLoading(false);
-      // }, 500);
 
       const lastVisibleRecipeIndex = visibleRecipes[visibleRecipes.length - 1];
-      console.log(lastRecipeIndex.id);
-      console.log(lastVisibleRecipeIndex.id);
 
       if (lastRecipeIndex.id === lastVisibleRecipeIndex.id) {
         updatePage();
-        console.log('page', page);
       }
-      // return () => {
-      //   clearTimeout(delayedUpdateVisibleRecipes);
-      // };
     }
     // eslint-disable-next-line
   }, [isLoading]);
 
   useEffect(() => {
     fetchRecipes(page);
-    console.log('page', page);
     // eslint-disable-next-line
   }, [page]);
 
@@ -59,20 +50,15 @@ export const RecipesList = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+      // eslint-disable-next-line
   }, []);
 
   const handleScroll = debounce(() => {
-    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+    const { scrollTop, clientHeight } = document.documentElement;
     if (scrollTop + clientHeight >= clientHeight + 110 && !isLoading) {
       setIsLoading(true);
     }
   }, 200);
-  // () => {
-  //   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-  //   if (scrollTop + clientHeight >= clientHeight + 110 && !isLoading) {
-  //     setIsLoading(true);
-  //   }
-  // };
 
   const handleShowFavorites = () => {
     setShowFavorites(!showFavorites);

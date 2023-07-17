@@ -52,12 +52,10 @@ const useBeerStore = create(set => ({
       const lastRecipeIndex = state.recipes.indexOf(
         state.visibleRecipes[state.visibleRecipes.length - 1]
       );
-      console.log(lastRecipeIndex);
       const addedRecipes = state.recipes.slice(
         lastRecipeIndex + 1,
         lastRecipeIndex + 1 + 5
       );
-      console.log('ff', addedRecipes);
       // eslint-disable-next-line
       const removedRecipes = state.visibleRecipes.splice(10, 5);
 

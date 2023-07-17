@@ -40,13 +40,12 @@
 .recipeCardImgBox {
   display: flex;
   justify-content: center;
-  // padding-top: 50px;
   width: 100px;
-  height: 150px;
+  height: 100px;
 
   @include tablet {
     width: 100px;
-    height: 300px;
+    height: 150px;
   }
 
   @include desktop {
@@ -60,28 +59,33 @@
 
   flex-direction: column;
   text-align: start;
-  gap: 10px;
+  gap: 5px;
 
-  font-size: 17px;
+  font-size: 11px;
   color: $darkTextColor;
 
   @include tablet {
-    // font-size: 25px;
+    font-size: 14px;
+    gap: 10px;
   }
 
   @include desktop {
-    // font-size: 25px;
+    font-size: 17px;
   }
 }
 
 .recipeCardBox {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .recipeCardTitle {
-  font-size: 20px;
+  font-size: 12px;
 
   @include tablet {
     font-size: 22px;
@@ -103,13 +107,13 @@
   font-size: 0px;
 
   @include tablet {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @include desktop {
-    top: 30px;
-    right: 60px;
-    font-size: 20px;
+    top: 15px;
+    right: 40px;
+    font-size: 18px;
   }
 }
 
@@ -141,7 +145,7 @@
 
   @include tablet {
     padding: 20px 50px;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   @include desktop {
