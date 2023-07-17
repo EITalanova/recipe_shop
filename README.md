@@ -1,4 +1,4 @@
-# **project Recipe show**
+# **project Recipe shop**
 
 The project was carried out on the basis **Create React App** </br>
 **Command to run:** 
