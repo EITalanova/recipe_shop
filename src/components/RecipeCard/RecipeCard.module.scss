@@ -43,17 +43,12 @@
 .recipeCardImgBox {
   display: flex;
   justify-content: center;
-width: 100px;
+  width: 100px;
   height: 100px;
 
   @include tablet {
     width: 10%;
     height: 80%;
-  }
-
-  @include desktop {
-    width: 200px;
-    height: 150px;
   }
 }
 
