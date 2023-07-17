@@ -1,34 +1,34 @@
 {
   "files": {
     "main.css": "/recipe_shop/static/css/main.76dc0744.css",
-    "main.js": "/recipe_shop/static/js/main.717017e4.js",
+    "main.js": "/recipe_shop/static/js/main.5ab6c855.js",
     "static/css/446.5e8c0264.chunk.css": "/recipe_shop/static/css/446.5e8c0264.chunk.css",
     "static/js/446.fca37dfb.chunk.js": "/recipe_shop/static/js/446.fca37dfb.chunk.js",
     "static/css/526.4d7fecf0.chunk.css": "/recipe_shop/static/css/526.4d7fecf0.chunk.css",
     "static/js/526.962abb54.chunk.js": "/recipe_shop/static/js/526.962abb54.chunk.js",
-    "static/css/601.08b5565c.chunk.css": "/recipe_shop/static/css/601.08b5565c.chunk.css",
-    "static/js/601.b9d10492.chunk.js": "/recipe_shop/static/js/601.b9d10492.chunk.js",
+    "static/css/601.60ca834d.chunk.css": "/recipe_shop/static/css/601.60ca834d.chunk.css",
+    "static/js/601.2f67ce9e.chunk.js": "/recipe_shop/static/js/601.2f67ce9e.chunk.js",
     "static/js/38.4c6d9c23.chunk.js": "/recipe_shop/static/js/38.4c6d9c23.chunk.js",
     "static/js/763.6b7f337d.chunk.js": "/recipe_shop/static/js/763.6b7f337d.chunk.js",
     "static/media/bgHome.png": "/recipe_shop/static/media/bgHome.4e3a255c9bc73cbe3f95.png",
-    "static/media/notFavorite.svg": "/recipe_shop/static/media/notFavorite.22e977c0857a07737cffe461e8d8eae6.svg",
+    "static/media/notFavorite.svg": "/recipe_shop/static/media/notFavorite.3e24fb1a102dd8248aa1a22ec6cb3b83.svg",
     "static/media/calendar.svg": "/recipe_shop/static/media/calendar.52e6266cc8cc60676a7e5fb3d909392e.svg",
     "index.html": "/recipe_shop/index.html",
     "static/media/bottle.svg": "/recipe_shop/static/media/bottle.812a0ec971b911861935c2eaadf773b9.svg",
-    "static/media/favorite.svg": "/recipe_shop/static/media/favorite.d5b63d6983d9788b1931c62d57174847.svg",
+    "static/media/favorite.svg": "/recipe_shop/static/media/favorite.3feff3cb96e95a7a747dd82c75a01163.svg",
     "main.76dc0744.css.map": "/recipe_shop/static/css/main.76dc0744.css.map",
-    "main.717017e4.js.map": "/recipe_shop/static/js/main.717017e4.js.map",
+    "main.5ab6c855.js.map": "/recipe_shop/static/js/main.5ab6c855.js.map",
     "446.5e8c0264.chunk.css.map": "/recipe_shop/static/css/446.5e8c0264.chunk.css.map",
     "446.fca37dfb.chunk.js.map": "/recipe_shop/static/js/446.fca37dfb.chunk.js.map",
     "526.4d7fecf0.chunk.css.map": "/recipe_shop/static/css/526.4d7fecf0.chunk.css.map",
     "526.962abb54.chunk.js.map": "/recipe_shop/static/js/526.962abb54.chunk.js.map",
-    "601.08b5565c.chunk.css.map": "/recipe_shop/static/css/601.08b5565c.chunk.css.map",
-    "601.b9d10492.chunk.js.map": "/recipe_shop/static/js/601.b9d10492.chunk.js.map",
+    "601.60ca834d.chunk.css.map": "/recipe_shop/static/css/601.60ca834d.chunk.css.map",
+    "601.2f67ce9e.chunk.js.map": "/recipe_shop/static/js/601.2f67ce9e.chunk.js.map",
     "38.4c6d9c23.chunk.js.map": "/recipe_shop/static/js/38.4c6d9c23.chunk.js.map",
     "763.6b7f337d.chunk.js.map": "/recipe_shop/static/js/763.6b7f337d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76dc0744.css",
-    "static/js/main.717017e4.js"
+    "static/js/main.5ab6c855.js"
   ]
 }
