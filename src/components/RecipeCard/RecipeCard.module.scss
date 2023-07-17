@@ -33,6 +33,9 @@
   gap: 20px;
 
   @include tablet {
+    gap: 30px;
+  }
+  @include desktop {
     gap: 80px;
   }
 }
@@ -40,12 +43,12 @@
 .recipeCardImgBox {
   display: flex;
   justify-content: center;
-  width: 100px;
+width: 100px;
   height: 100px;
 
   @include tablet {
-    width: 100px;
-    height: 150px;
+    width: 10%;
+    height: 80%;
   }
 
   @include desktop {
@@ -56,7 +59,6 @@
 
 .recipeCardText {
   display: flex;
-
   flex-direction: column;
   text-align: start;
   gap: 5px;
@@ -65,8 +67,9 @@
   color: $darkTextColor;
 
   @include tablet {
-    font-size: 14px;
-    gap: 10px;
+    gap: 5px;
+
+    font-size: 13px;
   }
 
   @include desktop {
@@ -88,6 +91,9 @@
   font-size: 12px;
 
   @include tablet {
+    font-size: 16px;
+  }
+  @include desktop {
     font-size: 22px;
   }
 }
@@ -107,7 +113,7 @@
   font-size: 0px;
 
   @include tablet {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @include desktop {
