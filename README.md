@@ -2,12 +2,12 @@
 
 The project was carried out on the basis **Create React App** </br>
 **Command to run:** 
-- Clone the repo
-- Go into folder: cd recipe_shop
-- Install dependencies: npm install
-- Start the app: npm start
-- Page to view in a browser: http://localhost:3000
-- Tweet away!
+1. Clone the repo
+2. Go into folder: cd recipe_shop
+3. Install dependencies: npm install
+4. Start the app: npm start
+5. Page to view in a browser: http://localhost:3000
+Welcome!
 
 **The following technologies were used:**
 - React
